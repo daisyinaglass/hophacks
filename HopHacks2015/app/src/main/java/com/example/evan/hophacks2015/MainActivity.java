@@ -2,6 +2,7 @@ package com.example.evan.hophacks2015;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
@@ -19,12 +20,15 @@ import android.os.Build;
 public class MainActivity extends ActionBarActivity implements View.OnTouchListener{
 
     //global variables up here
+    ViewingScreen viewingScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         //program in here
+        viewingScreen = new ViewingScreen(this);
+        setContentView(viewingScreen);
 
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
@@ -32,6 +36,7 @@ public class MainActivity extends ActionBarActivity implements View.OnTouchListe
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+        viewingScreen.setOnTouchListener(this);
     }
 
 
@@ -87,6 +92,7 @@ public class MainActivity extends ActionBarActivity implements View.OnTouchListe
 
         protected void onDraw(Canvas g) {
             Paint paint = new Paint();
+            paint.setColor(Color.BLACK);
             g.drawText("Hello world", 45, 45, paint);
         }
     }
