@@ -1,5 +1,6 @@
 package com.example.evan.hophacks2015;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -72,6 +73,14 @@ public class MainActivity extends ActionBarActivity implements View.OnTouchListe
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             return rootView;
+        }
+    }
+
+    //drawing things
+    public class ViewingScreen extends View {
+
+        public ViewingScreen(Context context) {
+            super(context);
         }
     }
 }
