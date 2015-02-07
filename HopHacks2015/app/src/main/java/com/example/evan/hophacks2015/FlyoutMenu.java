@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 public class FlyoutMenu extends LinearLayout {
 
     //CONSTANTS
-    
+
     //the different screens we are dealing with
     private View content;
     private View menu;
@@ -43,5 +43,17 @@ public class FlyoutMenu extends LinearLayout {
     }
     public FlyoutMenu(Context context) {
         super(context);
+    }
+
+    //attaching the slides (menu and content) to the screen
+    //this cannot be done in a constructor because we don't know if the slides will be created by then
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+
+        //referring to what's actually attached to each slide -> this is in the xml file
+        this.menu = this.getChildAt(0);
+        this.content = this.getChildAt(1);
+
+        this.menu.setVisibility(View.GONE);
     }
 }
