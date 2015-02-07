@@ -94,6 +94,7 @@ public class MainActivity extends ActionBarActivity implements View.OnTouchListe
 
         protected void onDraw(Canvas g) {
             Paint paint = new Paint();
+            paint.setTextSize(50);
             paint.setColor(Color.BLACK);
             g.drawText("Hello world", 45, 45, paint);
         }
