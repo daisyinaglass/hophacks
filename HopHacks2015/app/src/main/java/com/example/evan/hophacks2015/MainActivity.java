@@ -14,6 +14,8 @@ import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
 
+    //global variables up here
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
