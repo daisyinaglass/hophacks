@@ -7,21 +7,18 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
 
-public class MainActivity extends ActionBarActivity implements View.OnTouchListener {
+public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         //program in here
-
-
 
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
@@ -54,11 +51,6 @@ public class MainActivity extends ActionBarActivity implements View.OnTouchListe
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public boolean onTouch(View v, MotionEvent event) {
-        return false;
-    }
-
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -74,7 +66,4 @@ public class MainActivity extends ActionBarActivity implements View.OnTouchListe
             return rootView;
         }
     }
-
-    //drawing things
-
 }
