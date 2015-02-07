@@ -1,6 +1,8 @@
 package com.example.evan.hophacks2015;
 
 import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -81,6 +83,11 @@ public class MainActivity extends ActionBarActivity implements View.OnTouchListe
 
         public ViewingScreen(Context context) {
             super(context);
+        }
+
+        protected void onDraw(Canvas g) {
+            Paint paint = new Paint();
+            g.drawText("Hello world", 45, 45, paint);
         }
     }
 }
