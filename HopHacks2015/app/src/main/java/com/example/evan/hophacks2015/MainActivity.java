@@ -21,6 +21,7 @@ public class MainActivity extends ActionBarActivity implements View.OnTouchListe
 
     //global variables up here
     ViewingScreen viewingScreen;
+    FlyOutContainer root;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,5 +96,10 @@ public class MainActivity extends ActionBarActivity implements View.OnTouchListe
             paint.setColor(Color.BLACK);
             g.drawText("Hello world", 45, 45, paint);
         }
+    }
+
+    //responds to the button clicks, sends to FlyoutContainer class
+    public void toggleMenu(View v) {
+        this.root.toggleMenu();
     }
 }
